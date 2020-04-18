@@ -1,21 +1,21 @@
 import * as actionTypes from '../actions/actionTypes';
-import { updateObject } from './../utility';
+import { updateObject } from './../../shared/utility';
 
 const initialState = {
   orders: [],
   loading: false,
-  purchased: false
+  purchased: false,
 };
 
 const purchaseInit = (state, action) => {
   return updateObject(state, {
-    purchased: false
+    purchased: false,
   });
 };
 
 const purchaseBurgerStart = (state, action) => {
   return updateObject(state, {
-    loading: true
+    loading: true,
   });
 };
 
@@ -24,28 +24,28 @@ const purchaseBurgerSuccess = (state, action) => {
   return updateObject(state, {
     loading: false,
     purchased: true,
-    orders: state.orders.concat(newOrder)
+    orders: state.orders.concat(newOrder),
   });
 };
 const purchaseBurgerFail = (state, action) => {
   return updateObject(state, {
-    loading: false
+    loading: false,
   });
 };
 const fetchOrdersStart = (state, action) => {
   return updateObject(state, {
-    loading: true
+    loading: true,
   });
 };
 const fetchOrdersSuccess = (state, action) => {
   return updateObject(state, {
     orders: action.orders,
-    loading: false
+    loading: false,
   });
 };
 const fetchOrdersFail = (state, action) => {
   return updateObject(state, {
-    loading: false
+    loading: false,
   });
 };
 
