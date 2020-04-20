@@ -3,6 +3,11 @@ esm
 lib
 dist
 .idea
+build
+.firebase
+.firebaserc
+firebase.json
 
+/build
 /node_modules
 .DS_Store
